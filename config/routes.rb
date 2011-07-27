@@ -1,4 +1,13 @@
 Wordscloud::Application.routes.draw do
+  root to: "pages#index"
+
+  resources :users do
+    member do
+      post 'new'
+    end
+  end
+
+  match '/signup', to: 'users#new'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
