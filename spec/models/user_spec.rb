@@ -18,8 +18,8 @@ describe User do
 
     it "should reject duplicate email addresses" do
       User.create!(@attr)
-     # user_with_duplicate_email = User.new(@attr.merge(name: "nowak"))
-     # user_with_duplicate_email.should_not be_valid
+      user_with_duplicate_email = User.new(@attr.merge(name: "nowak"))
+      user_with_duplicate_email.should_not be_valid
     end
 
     it "test3" do
